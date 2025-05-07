@@ -1,10 +1,11 @@
+using Kolokwium.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-//builder.Services.AddScoped<ITripsService, TripsService>();
-//builder.Services.AddScoped<IClientsService, ClientsService>();
+builder.Services.AddScoped<IDbService, DbService>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
